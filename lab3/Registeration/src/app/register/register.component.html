@@ -1,0 +1,21 @@
+<div>
+    <h3>Registration</h3>
+    <div class="myForm">
+      <input [(ngModel)]="Name" type="text" placeholder="Name">
+      <input [(ngModel)]="Age" type="number" placeholder="Age">
+      @if(+Age >40){
+<div style="color: red;">
+    Age Not Valid
+</div>
+  }@else if(+Age){
+    <div style="color: rgb(27, 180, 27);">
+Age Valid
+    </div>
+  }@else{
+    <div>
+        Enter an Age please !
+    </div>
+  }
+      <button (click)="ADD()">ADD</button>
+    </div>
+  </div>
