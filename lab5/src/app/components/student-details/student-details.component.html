@@ -1,0 +1,44 @@
+<div
+  *ngIf="Student"
+  class="container mt-5 shadow-lg rounded-2 p-5 border text-center"
+>
+  <h1 class="display-4 fw-bold">{{ Student.name }}</h1>
+  <hr />
+  <div class="row justify-content-around align-items-start">
+    <div class="col-md-6 col-xl-3 my-3">
+      <img
+        src="../../../assets/images/personal-43.png"
+        alt="Profile Picture"
+        class="rounded img-fluid"
+      />
+    </div>
+    <div class="col-md-6 col-xl-9 my-auto">
+      <table class="table table-responsive w-75 mx-auto caption-top">
+        <caption class="fw-bold fs-3 mb-5 my-5 text-dark">
+          Student Details
+        </caption>
+        <tbody class="fw-bold fs-5 text-center">
+          <tr>
+            <th scope="row">ID:</th>
+            <td>{{ Student.id }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email:</th>
+            <td>{{ Student.email }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Age:</th>
+            <td>{{ Student.age }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div
+    *ngIf="!Student"
+    class="container mt-5 shadow-lg rounded-2 p-5 border text-center"
+  >
+    <p>Student not found</p>
+  </div>
+</div>
